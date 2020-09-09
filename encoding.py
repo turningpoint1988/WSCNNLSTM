@@ -136,8 +136,8 @@ def parse_args():
     user = pwd.getpwuid(os.getuid())[0]
 
     # Positional (unnamed) arguments:
-    parser.add_argument("posfile",  type=str, help="Sequence in FASTA/TSV format (with .fa/.fasta or .tsv extension)")
-    parser.add_argument("negfile",  type=str,help="Label of the sequence. One number per line")
+    parser.add_argument("posfile",  type=str, help="Positive sequences in FASTA/TSV format (with .fa/.fasta or .tsv extension)")
+    parser.add_argument("negfile",  type=str,help="Negative sequences in FASTA/TSV format")
     parser.add_argument("outfile",  type=str, help="Output file (example: $MODEL_TOPDIR$/data/train.hdf5). ")
 
     parser.add_argument("-m", "--mapperfile", dest="mapperfile", default="", help="A file mapping each nucleotide to a vector.")
